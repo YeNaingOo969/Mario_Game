@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="mario.GameController"
+            prefWidth="800" prefHeight="540"
+            style="-fx-background-color: #1a1a2e;">
+
+    <!-- ── Top HUD bar ─────────────────────────────────── -->
+    <top>
+        <HBox spacing="30" style="-fx-padding: 8 16 8 16; -fx-background-color: #16213e; -fx-alignment: CENTER_LEFT;">
+            <Label text="Mario Game"
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #e94560;"/>
+            <Label fx:id="scoreLabel" text="Score: 0"
+                   style="-fx-font-size: 14px; -fx-text-fill: #ffd700; -fx-font-weight: bold;"/>
+            <Label fx:id="livesLabel" text="Lives: 3"
+                   style="-fx-font-size: 14px; -fx-text-fill: #ff6b6b; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- ── Main game canvas ────────────────────────────── -->
+    <center>
+        <Pane fx:id="gamePane"
+              prefWidth="800" prefHeight="460"
+              
+              style="-fx-background-color: linear-gradient(to bottom, #0f3460 0%, #16213e 60%, #1a3a6e 100%);">
+        </Pane>
+    </center>
+
+    <!-- ── Bottom status bar ───────────────────────────── -->
+    <bottom>
+        <HBox style="-fx-padding: 6 16 6 16; -fx-background-color: #0f3460; -fx-alignment: CENTER;">
+            <Label fx:id="statusLabel"
+                   text="← → Move  |  SPACE Jump  |  R Restart"
+                   style="-fx-font-size: 12px; -fx-text-fill: #a8dadc;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
